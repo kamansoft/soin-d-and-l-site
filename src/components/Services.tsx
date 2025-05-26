@@ -8,6 +8,7 @@ export const Services = () => {
     {
       icon: <Zap className="w-12 h-12 text-green-400" />,
       title: "INGENIERÍA ELÉCTRICA",
+      excerpt: "Diseño y ejecución de obras eléctricas industriales y residenciales, montaje de tableros CCMs, TDP, TDA, PLC...",
       items: [
         "Diseño y ejecución de obras eléctricas industriales y residenciales",
         "Montaje e instalación de tableros CCMs, TDP, TDA, PLC",
@@ -29,6 +30,7 @@ export const Services = () => {
     {
       icon: <Settings className="w-12 h-12 text-green-400" />,
       title: "INSTRUMENTACIÓN",
+      excerpt: "Uso de equipos electrónicos para medir o registrar procesos, optimizar recursos y ofrecer seguridad...",
       items: [
         "Uso de equipos electrónicos para medir o registrar procesos",
         "Optimizar los recursos y regulación, observación, transformación, ofrecer seguridad",
@@ -38,6 +40,7 @@ export const Services = () => {
     {
       icon: <CheckCircle className="w-12 h-12 text-green-400" />,
       title: "PRECOMISIONADO",
+      excerpt: "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los sistemas...",
       items: [
         "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los Sistema y Subsistemas, de acuerdo a lo descrito en los procedimientos"
       ]
@@ -45,6 +48,7 @@ export const Services = () => {
     {
       icon: <Wrench className="w-12 h-12 text-green-400" />,
       title: "MONTAJES DE EQUIPOS",
+      excerpt: "Montaje de sistemas de comederos, bebederos, cuadros de agua, silos y sistemas de reparto...",
       items: [
         "Montaje de sistemas de comederos, bebederos, cuadros de agua, silos",
         "Sistemas de reparto, sistemas de enfriamiento en panel y fogger",
@@ -94,10 +98,16 @@ export const Services = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
+                {/* Excerpt */}
+                <p className="text-gray-300 text-sm md:text-base mb-4 leading-relaxed">
+                  {service.excerpt}
+                </p>
+                
+                {/* Expandable Full List */}
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="items" className="border-green-500/20">
                     <AccordionTrigger className="text-green-400 hover:text-green-300 text-center justify-center">
-                      Ver servicios ({service.items.length})
+                      Ver todos los servicios ({service.items.length})
                     </AccordionTrigger>
                     <AccordionContent>
                       <ul className="space-y-3 mt-4">
