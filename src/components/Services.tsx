@@ -1,5 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle } from "lucide-react";
 
 export const Services = () => {
@@ -83,8 +84,8 @@ export const Services = () => {
         {/* Main Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {mainServices.map((service, index) => (
-            <Card key={index} className="bg-gray-900/50 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
-              <CardHeader className="text-center">
+            <Card key={index} className="bg-gray-900/50 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105 h-full flex flex-col">
+              <CardHeader className="text-center flex-shrink-0">
                 <div className="flex justify-center mb-4">
                   {service.icon}
                 </div>
@@ -92,15 +93,24 @@ export const Services = () => {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {service.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300 text-sm md:text-base">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <CardContent className="flex-1 flex flex-col">
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="items" className="border-green-500/20">
+                    <AccordionTrigger className="text-green-400 hover:text-green-300 text-center justify-center">
+                      Ver servicios ({service.items.length})
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="space-y-3 mt-4">
+                        {service.items.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-gray-300 text-sm md:text-base">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </CardContent>
             </Card>
           ))}
@@ -109,13 +119,13 @@ export const Services = () => {
         {/* Additional Services */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {additionalServices.map((service, index) => (
-            <Card key={index} className="bg-gray-900/30 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300">
-              <CardContent className="p-6 text-center">
+            <Card key={index} className="bg-gray-900/30 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 h-full flex flex-col">
+              <CardContent className="p-6 text-center flex-1 flex flex-col">
                 <div className="flex justify-center mb-4">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-bold text-green-400 mb-4">{service.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed flex-1">{service.description}</p>
               </CardContent>
             </Card>
           ))}
