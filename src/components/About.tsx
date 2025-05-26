@@ -10,27 +10,49 @@ export const About = () => {
           </span>
         </h2>
         
-        <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-500/20">
+        <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-green-500/20 mb-12">
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
             Somos una empresa joven, formada por personal calificado, 
             cuyas actividades se centran en:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-            {[
-              "Instalación especializada de máquinas y equipos",
-              "Instalaciones eléctricas residenciales e industriales",
-              "Fabricación de tableros eléctricos",
-              "Programación de controladores lógicos programables",
-              "Control de sistemas de temperatura",
-              "Montaje de sistema eléctrico en granjas con ambiente controlado y tradicional",
-              "Instalación de redes de baja tensión, subterráneas o aéreas"
-            ].map((service, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-gray-300">{service}</p>
-              </div>
-            ))}
+          <p className="text-lg text-gray-300 leading-relaxed text-left">
+            Nos especializamos en la instalación especializada de máquinas y equipos, 
+            así como en instalaciones eléctricas tanto residenciales como industriales. 
+            Desarrollamos la fabricación de tableros eléctricos y programación de controladores 
+            lógicos programables, además del control de sistemas de temperatura. Realizamos 
+            el montaje de sistemas eléctricos en granjas con ambiente controlado y tradicional, 
+            junto con la instalación de redes de baja tensión, tanto subterráneas como aéreas.
+          </p>
+        </div>
+
+        {/* Mission and Vision Blocks */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Mission */}
+          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
+                MISIÓN
+              </span>
+            </h3>
+            <p className="text-lg text-gray-300 leading-relaxed text-center">
+              Somos una empresa dedicada al diseño, desarrollo, ejecución, supervisión, 
+              mantenimiento eléctrico y mecánico residencial e industrial.
+            </p>
+          </div>
+
+          {/* Vision */}
+          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
+                VISIÓN
+              </span>
+            </h3>
+            <p className="text-lg text-gray-300 leading-relaxed text-center">
+              Ser reconocido como una empresa líder en el mercado del diseño, desarrollo, 
+              ejecución, supervisión, mantenimiento eléctrico y mecánico residencial e 
+              industrial y los mejores ejecutores de Proyectos.
+            </p>
           </div>
         </div>
       </div>
