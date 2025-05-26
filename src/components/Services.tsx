@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle } from "lucide-react";
+import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle, PlayCircle } from "lucide-react";
 
 export const Services = () => {
   const mainServices = [
@@ -140,6 +139,32 @@ export const Services = () => {
             </Card>
           ))}
         </div>
+
+        {/* Puesta en Marcha - Full Width Section */}
+        <Card className="bg-gray-900/50 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+          <CardHeader className="text-center">
+            <div className="flex justify-center mb-4">
+              <PlayCircle className="w-12 h-12 text-green-400" />
+            </div>
+            <CardTitle className="text-2xl md:text-3xl text-green-400 font-bold">
+              PUESTA EN MARCHA
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6 text-gray-300">
+            <p className="text-lg leading-relaxed">
+              Verificar que las instalaciones operen como un todo de acuerdo con las condiciones de diseño, 
+              procediendo gradualmente a poner las instalaciones en operación paso por paso y de un modo 
+              controlado, seguro y confiable hasta que estas reúnan las condiciones normales de operación 
+              y la producción se haya estabilizado. En esta etapa se efectúan las pruebas para verificar el 
+              cumplimiento de los parámetros garantizados.
+            </p>
+            <p className="text-lg leading-relaxed">
+              La operación se realiza siguiendo las instrucciones de los manuales de fabricación, montaje, 
+              prueba de materiales, equipos especializados o guías de adquisición, logrando de esta manera 
+              alcanzar los objetivos especificados en los diseños.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
