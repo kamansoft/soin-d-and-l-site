@@ -28,7 +28,7 @@ export const Mission = () => {
             <p className="text-lg text-gray-300 leading-relaxed text-center">
               Ser reconocido como una empresa líder en el mercado del diseño, desarrollo, 
               ejecución, supervisión, mantenimiento eléctrico y mecánico residencial e 
-              industrial y los mejores ejecutores de Proyectos.
+              industrial y los mejores ejecutores de proyectos.
             </p>
           </div>
         </div>
