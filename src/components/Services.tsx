@@ -1,9 +1,9 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Zap, Settings, CheckCircle, Wrench } from "lucide-react";
+import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle } from "lucide-react";
 
 export const Services = () => {
-  const services = [
+  const mainServices = [
     {
       icon: <Zap className="w-12 h-12 text-green-400" />,
       title: "INGENIERÍA ELÉCTRICA",
@@ -12,7 +12,17 @@ export const Services = () => {
         "Montaje e instalación de tableros CCMs, TDP, TDA, PLC",
         "Montaje de soportería, tubería, Bandeja",
         "Pruebas de continuidad de cableado de fuerza e instrumentación",
-        "Diseño e Instalación y mantenimiento de Sistemas de Puestas a Tierra"
+        "Diseño e Instalación y mantenimiento de Sistemas de Puestas a Tierra",
+        "Instalación de luminarias en postes y residenciales",
+        "Fabricación e instalación de cerchas",
+        "Adecuación de sistemas eléctricos bajo normatividad RETIE",
+        "Proceso de certificación RETIE",
+        "Diseño de plano eléctricos",
+        "Memorias de cálculo eléctricos",
+        "Montaje y diseño de estructuras metálicas",
+        "Poda y limpieza de redes eléctricas",
+        "Transporte de materiales eléctricos",
+        "Siembra de postefios para cercas"
       ]
     },
     {
@@ -42,6 +52,24 @@ export const Services = () => {
     }
   ];
 
+  const additionalServices = [
+    {
+      icon: <Cog className="w-10 h-10 text-green-400" />,
+      title: "METAL MECÁNICA",
+      description: "Diseño, Fabricación y Montaje de estructuras metálicas, rejillas, barandas, escaleras, soportes especiales, casetas para equipos, puertas, techos, bandas y aplicación de soldadura en acero inoxidable."
+    },
+    {
+      icon: <Settings className="w-10 h-10 text-green-400" />,
+      title: "MANTENIMIENTO DE EQUIPOS",
+      description: "Mantenimiento mecánico y eléctrico a maquinaria y equipos industriales. Planificación y Programación de Mantenimiento preventivo y correctivo. Mantenimiento Basado en Condición y Centrado en Confiabilidad."
+    },
+    {
+      icon: <AlertTriangle className="w-10 h-10 text-green-400" />,
+      title: "SERVICIOS DE EMERGENCIAS",
+      description: "Atención de servicios que por su gravedad requieren intervención inmediata para garantizar la continuidad operacional."
+    }
+  ];
+
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900"></div>
@@ -52,8 +80,9 @@ export const Services = () => {
           </span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+        {/* Main Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <Card key={index} className="bg-gray-900/50 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">
@@ -72,6 +101,21 @@ export const Services = () => {
                     </li>
                   ))}
                 </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Additional Services */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {additionalServices.map((service, index) => (
+            <Card key={index} className="bg-gray-900/30 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="flex justify-center mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-bold text-green-400 mb-4">{service.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
               </CardContent>
             </Card>
           ))}
