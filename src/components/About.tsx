@@ -17,7 +17,7 @@ export const About = () => {
           </p>
           
           <p className="text-lg text-gray-300 leading-relaxed text-left">
-            Nos especializamos en la instalación especializada de máquinas y equipos, 
+            Nos distinguimos en la instalación especializada de máquinas y equipos, 
             así como en instalaciones eléctricas tanto residenciales como industriales. 
             Desarrollamos la fabricación de tableros eléctricos y programación de controladores 
             lógicos programables, además del control de sistemas de temperatura. Realizamos 
