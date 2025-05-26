@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle, PlayCircle, Gauge } from "lucide-react";
@@ -132,7 +133,7 @@ export const Services = () => {
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="items" className="border-green-500/20">
                     <AccordionTrigger className="text-green-400 hover:text-green-300 text-center justify-center">
-                      Ver todos los servicios ({service.items.length})
+                      Ver mas sobre servicio ({service.items.length})
                     </AccordionTrigger>
                     <AccordionContent>
                       <ul className="space-y-3 mt-4">
