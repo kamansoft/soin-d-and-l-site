@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle, PlayCircle } from "lucide-react";
+import { Zap, Settings, CheckCircle, Wrench, Cog, AlertTriangle, PlayCircle, Gauge } from "lucide-react";
 
 export const Services = () => {
   const mainServices = [
@@ -50,6 +49,19 @@ export const Services = () => {
         "Operación siguiendo las instrucciones de los manuales de fabricación",
         "Montaje, prueba de materiales, equipos especializados o guías de adquisición",
         "Alcanzar los objetivos especificados en los diseños"
+      ]
+    },
+    {
+      icon: <Gauge className="w-12 h-12 text-green-400" />,
+      title: "COMISIONADO",
+      excerpt: "Verificamos cada elemento del sistema (eléctrico, tubería y equipo) que permitan acondicionar a las instalaciones...",
+      items: [
+        "Verificamos cada elemento del sistema (eléctrico, tubería y equipo)",
+        "Permitir acondicionar a las instalaciones que integran los sistemas operativos",
+        "Iniciar el arranque o puesta en marcha y estabilización de las mismas en forma segura",
+        "Garantizar que los sistemas que conforman el proyecto, interactúen entre sí de acuerdo a los diseños",
+        "Cumplimiento de normas, requerimientos del cliente y recomendaciones de los fabricantes",
+        "Estar especialmente listos para iniciar las actividades de Puesta en Marcha de la Planta"
       ]
     },
     {
