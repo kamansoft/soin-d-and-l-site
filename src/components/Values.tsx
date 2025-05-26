@@ -16,10 +16,39 @@ export const Values = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-green-400">
               VALORES
             </h3>
-            <p className="text-lg text-gray-300 leading-relaxed text-center">
-              Disciplina, puntualidad, Responsabilidad, liderazgo, 
-              honestidad, trabajo, calidad.
+            <p className="text-lg text-gray-300 leading-relaxed mb-6 text-center">
+              Los valores que nos definen como organización y guían nuestro trabajo diario:
             </p>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Disciplina
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Puntualidad
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Responsabilidad
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Liderazgo
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Honestidad
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Trabajo en equipo
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Calidad
+              </li>
+            </ul>
           </div>
 
           {/* Professional Team */}
@@ -27,32 +56,18 @@ export const Values = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-green-400">
               NUESTRO PERSONAL
             </h3>
-            <p className="text-lg text-gray-300 leading-relaxed text-center">
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
               Contamos con un equipo profesional de técnicos y 
               asesores altamente capacitados para brindar soluciones 
               integrales en Mantenimiento y reparación de máquinas y 
               equipos industriales y residenciales.
             </p>
-          </div>
-        </div>
-
-        {/* Commissioning and Operation Section */}
-        <div className="mt-16 bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-green-400">
-            PUESTA EN MARCHA
-          </h3>
-          <div className="space-y-6 text-gray-300">
-            <p className="text-lg leading-relaxed">
-              Verificar que las instalaciones operen como un todo de acuerdo con las condiciones de diseño, 
-              procediendo gradualmente a poner las instalaciones en operación paso por paso y de un modo 
-              controlado, seguro y confiable hasta que estas reúnan las condiciones normales de operación 
-              y la producción se haya estabilizado. En esta etapa se efectúan las pruebas para verificar el 
-              cumplimiento de los parámetros garantizados.
-            </p>
-            <p className="text-lg leading-relaxed">
-              La operación se realiza siguiendo las instrucciones de los manuales de fabricación, montaje, 
-              prueba de materiales, equipos especializados o guías de adquisición, logrando de esta manera 
-              alcanzar los objetivos especificados en los diseños.
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Nuestro personal encarna estos valores en cada proyecto, 
+              demostrando disciplina en la ejecución, puntualidad en las entregas, 
+              y responsabilidad en cada compromiso adquirido. Su liderazgo y 
+              honestidad, combinados con un trabajo en equipo excepcional, 
+              garantizan la calidad que nos caracteriza.
             </p>
           </div>
         </div>
