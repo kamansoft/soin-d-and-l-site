@@ -37,18 +37,11 @@ export const Services = () => {
       ]
     },
     {
-      icon: <PlayCircle className="w-12 h-12 text-green-400" />,
-      title: "PUESTA EN MARCHA",
-      excerpt: "Verificar que las instalaciones operen como un todo de acuerdo con las condiciones de diseño...",
+      icon: <CheckCircle className="w-12 h-12 text-green-400" />,
+      title: "PRECOMISIONADO",
+      excerpt: "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los sistemas...",
       items: [
-        "Verificar que las instalaciones operen como un todo de acuerdo con las condiciones de diseño",
-        "Proceder gradualmente a poner las instalaciones en operación paso por paso",
-        "Modo controlado, seguro y confiable hasta que reúnan las condiciones normales de operación",
-        "Estabilización de la producción",
-        "Pruebas para verificar el cumplimiento de los parámetros garantizados",
-        "Operación siguiendo las instrucciones de los manuales de fabricación",
-        "Montaje, prueba de materiales, equipos especializados o guías de adquisición",
-        "Alcanzar los objetivos especificados en los diseños"
+        "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los Sistema y Subsistemas, de acuerdo a lo descrito en los procedimientos"
       ]
     },
     {
@@ -65,21 +58,26 @@ export const Services = () => {
       ]
     },
     {
-      icon: <CheckCircle className="w-12 h-12 text-green-400" />,
-      title: "PRECOMISIONADO",
-      excerpt: "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los sistemas...",
+      icon: <PlayCircle className="w-12 h-12 text-green-400" />,
+      title: "PUESTA EN MARCHA",
+      excerpt: "Verificar que las instalaciones operen como un todo de acuerdo con las condiciones de diseño...",
       items: [
-        "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los Sistema y Subsistemas, de acuerdo a lo descrito en los procedimientos"
+        "Verificar que las instalaciones operen como un todo de acuerdo con las condiciones de diseño",
+        "Proceder gradualmente a poner las instalaciones en operación paso por paso",
+        "Modo controlado, seguro y confiable hasta que reúnan las condiciones normales de operación",
+        "Estabilización de la producción",
+        "Pruebas para verificar el cumplimiento de los parámetros garantizados",
+        "Operación siguiendo las instrucciones de los manuales de fabricación",
+        "Montaje, prueba de materiales, equipos especializados o guías de adquisición",
+        "Alcanzar los objetivos especificados en los diseños"
       ]
     },
     {
-      icon: <Wrench className="w-12 h-12 text-green-400" />,
-      title: "MONTAJES DE EQUIPOS",
-      excerpt: "Montaje de sistemas de comederos, bebederos, cuadros de agua, silos y sistemas de reparto...",
+      icon: <AlertTriangle className="w-12 h-12 text-green-400" />,
+      title: "SERVICIOS DE EMERGENCIAS",
+      excerpt: "Atención de servicios que por su gravedad requieren intervención inmediata para garantizar la continuidad operacional...",
       items: [
-        "Montaje de sistemas de comederos, bebederos, cuadros de agua, silos",
-        "Sistemas de reparto, sistemas de enfriamiento en panel y fogger",
-        "Sistemas de ventilación y sistemas de pesaje en granjas"
+        "Atención de servicios que por su gravedad requieren intervención inmediata para garantizar la continuidad operacional"
       ]
     }
   ];
@@ -96,9 +94,9 @@ export const Services = () => {
       description: "Mantenimiento mecánico y eléctrico a maquinaria y equipos industriales. Planificación y Programación de Mantenimiento preventivo y correctivo. Mantenimiento Basado en Condición y Centrado en Confiabilidad."
     },
     {
-      icon: <AlertTriangle className="w-10 h-10 text-green-400" />,
-      title: "SERVICIOS DE EMERGENCIAS",
-      description: "Atención de servicios que por su gravedad requieren intervención inmediata para garantizar la continuidad operacional."
+      icon: <Wrench className="w-10 h-10 text-green-400" />,
+      title: "MONTAJES DE EQUIPOS",
+      description: "Montaje de sistemas de comederos, bebederos, cuadros de agua, silos y sistemas de reparto, sistemas de enfriamiento en panel y fogger, sistemas de ventilación y sistemas de pesaje en granjas."
     }
   ];
 
