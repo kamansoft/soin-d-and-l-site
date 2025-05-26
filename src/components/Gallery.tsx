@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { 
   Carousel,
   CarouselContent,
@@ -6,24 +7,46 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 export const Gallery = () => {
-  const projectImages = [
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+
+  const featuredProjects = [
     {
-      src: "/lovable-uploads/f52e6484-9fe6-410c-9519-0f8ba770dbaa.png",
-      title: "Instalaciones Eléctricas Industriales",
-      description: "Montaje de tableros y sistemas de control"
+      id: 1,
+      title: "Sistema Eléctrico Industrial Completo",
+      shortDescription: "Instalación completa de sistemas eléctricos para complejo industrial de 5000m²",
+      coverImage: "/lovable-uploads/f52e6484-9fe6-410c-9519-0f8ba770dbaa.png",
+      gallery: [
+        "/lovable-uploads/f52e6484-9fe6-410c-9519-0f8ba770dbaa.png",
+        "/lovable-uploads/2fb99dde-998e-4c93-8514-31fa12afaad9.png",
+        "/lovable-uploads/5b5b40f1-e066-4b4b-a51d-6da3d09f0472.png"
+      ],
+      fullDescription: "Proyecto integral que incluyó el diseño e instalación de tableros de control, sistemas de iluminación LED industriales, y redes de distribución eléctrica para una planta de manufactura."
     },
     {
-      src: "/lovable-uploads/01e0dee9-8562-4bef-9d46-e4ee442bbb97.png",
-      title: "Sistemas Agropecuarios",
-      description: "Instalaciones para granjas avícolas"
+      id: 2,
+      title: "Automatización Granja Avícola",
+      shortDescription: "Sistema automatizado para control de ambiente y alimentación en granja de 10,000 aves",
+      coverImage: "/lovable-uploads/01e0dee9-8562-4bef-9d46-e4ee442bbb97.png",
+      gallery: [
+        "/lovable-uploads/01e0dee9-8562-4bef-9d46-e4ee442bbb97.png",
+        "/lovable-uploads/f2c8c0e4-44e3-40ef-aa8f-02c36b5ef28a.png",
+        "/lovable-uploads/8da8ca72-95eb-4861-9af5-fb3365b7fbf2.png"
+      ],
+      fullDescription: "Implementación de sistemas de control automatizado para temperatura, humedad, ventilación y alimentación, incluyendo sensores IoT y paneles de control centralizados."
     }
   ];
 
   const servicePhotos = [
     {
-      src: "/lovable-uploads/2fb99dde-998e-4c93-8514-31fa12afaad9.png",
+      src: "/lovable-uploads/2fb99dde-998e-4c93-8514-31fa12afaad9.png", 
       title: "Trabajos Eléctricos Especializados",
       category: "Ingeniería Eléctrica"
     },
@@ -60,17 +83,24 @@ export const Gallery = () => {
             Proyectos Destacados
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectImages.map((image, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-2xl border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+            {featuredProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="group relative overflow-hidden rounded-2xl border border-green-500/20 hover:border-green-400/40 transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedProject(project)}
+              >
                 <img 
-                  src={image.src} 
-                  alt={image.title}
-                  className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                  src={project.coverImage} 
+                  alt={project.title}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-xl font-bold text-white mb-2">{image.title}</h4>
-                    <p className="text-gray-300">{image.description}</p>
+                    <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+                    <p className="text-gray-300 text-sm">{project.shortDescription}</p>
+                    <div className="mt-3 inline-block px-3 py-1 bg-green-500/80 rounded-full text-xs font-medium text-black">
+                      Ver Galería
+                    </div>
                   </div>
                 </div>
               </div>
@@ -110,6 +140,41 @@ export const Gallery = () => {
           </Carousel>
         </div>
       </div>
+
+      {/* Project Gallery Modal */}
+      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+        <DialogContent className="max-w-4xl bg-black border-green-500/20">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-green-400">
+              {selectedProject?.title}
+            </DialogTitle>
+          </DialogHeader>
+          {selectedProject && (
+            <div className="space-y-6">
+              <p className="text-gray-300 text-lg leading-relaxed">
+                {selectedProject.fullDescription}
+              </p>
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {selectedProject.gallery.map((image: string, index: number) => (
+                    <CarouselItem key={index}>
+                      <div className="relative">
+                        <img 
+                          src={image} 
+                          alt={`${selectedProject.title} - Imagen ${index + 1}`}
+                          className="w-full h-96 object-cover rounded-lg"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="text-green-400 border-green-400/40 hover:bg-green-400/10" />
+                <CarouselNext className="text-green-400 border-green-400/40 hover:bg-green-400/10" />
+              </Carousel>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
