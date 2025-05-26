@@ -87,7 +87,7 @@ export const Services = () => {
         {/* Main Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {mainServices.map((service, index) => (
-            <Card key={index} className="bg-gray-900/50 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105 h-full flex flex-col">
+            <Card key={index} className="bg-gray-900/50 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 h-full flex flex-col">
               <CardHeader className="text-center flex-shrink-0">
                 <div className="flex justify-center mb-4">
                   {service.icon}
@@ -126,7 +126,7 @@ export const Services = () => {
         </div>
 
         {/* Additional Services */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {additionalServices.map((service, index) => (
             <Card key={index} className="bg-gray-900/30 backdrop-blur-sm border-green-500/20 hover:border-green-400/40 transition-all duration-300 h-full flex flex-col">
               <CardContent className="p-6 text-center flex-1 flex flex-col">
