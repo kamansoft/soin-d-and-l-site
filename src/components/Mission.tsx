@@ -42,9 +42,9 @@ export const Mission = () => {
               {/* Content with better typography */}
               <div className="flex-1 flex items-center">
                 <p className="text-lg lg:text-xl text-gray-200 leading-relaxed text-center font-light">
-                  Somos una empresa dedicada al 
-                  <span className="text-green-300 font-medium"> diseño, desarrollo, ejecución, supervisión</span>, 
-                  mantenimiento eléctrico y mecánico 
+                  Somos una empresa dedicada al
+                  <span className="text-green-300 font-medium"> diseño, desarrollo, ejecución, supervisión y mantenimiento </span> de:
+                  equipos avícolas, sistemas eléctricos y mecánicos a nivel
                   <span className="text-green-300 font-medium"> residencial e industrial</span>.
                 </p>
               </div>
