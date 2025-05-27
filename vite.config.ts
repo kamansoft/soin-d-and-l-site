@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  vase: "/soin-d-and-l-site/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
