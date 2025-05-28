@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
+  const scrollToServices = () => {
+    const element = document.getElementById("services");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background */}
@@ -53,6 +60,7 @@ export const Hero = () => {
         </p>
 
         <Button 
+          onClick={scrollToServices}
           size="lg" 
           className="bg-gradient-to-r from-green-500 to-emerald-400 hover:from-green-600 hover:to-emerald-500 text-black font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg animate-fade-in delay-500 hover:scale-105 transition-all duration-300"
         >
