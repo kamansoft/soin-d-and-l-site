@@ -18,13 +18,14 @@ export const Contact = () => {
           {[
             {
               icon: <Phone className="w-8 h-8 text-green-400" />,
-              title: "Teléfono",
-              info: "+57 XXX XXX XXXX"
+              title: "Teléfonos",
+              info: "+57 315 274 6269",
+              info2: "+57 315 868 5619"
             },
             {
               icon: <Mail className="w-8 h-8 text-green-400" />,
               title: "Email",
-              info: "info@soindlsas.com"
+              info: "soindl@hotmail.com"
             },
             {
               icon: <MapPin className="w-8 h-8 text-green-400" />,
@@ -39,6 +40,7 @@ export const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-green-400 mb-2">{contact.title}</h3>
                 <p className="text-gray-300">{contact.info}</p>
+                <p className="text-gray-300">{contact.info2}</p>
               </CardContent>
             </Card>
           ))}
