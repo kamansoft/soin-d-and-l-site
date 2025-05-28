@@ -40,7 +40,7 @@ export const Gallery = () => {
             order: 2,
             title: "Servicios de Emergencia",
             shortDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata.",
-            coverImage: "/lovable-uploads/emergencia_4.jpg",
+            coverImage: "/lovable-uploads/emergencia_1.jpg",
             gallery: galleryData["servicios-de-emergencia"]?.length > 0 ? galleryData["servicios-de-emergencia"] : [
                 "/lovable-uploads/emergencia_1.jpg",
                 "/lovable-uploads/emergencia_2.jpg",
