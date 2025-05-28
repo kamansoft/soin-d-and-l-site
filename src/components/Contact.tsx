@@ -46,14 +46,7 @@ export const Contact = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-green-500 to-emerald-400 hover:from-green-600 hover:to-emerald-500 text-black font-semibold px-8 py-6 text-lg hover:scale-105 transition-all duration-300"
-          >
-            Solicitar Cotización
-          </Button>
-        </div>
+
 
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-green-500/20 text-center">
