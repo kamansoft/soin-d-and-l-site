@@ -33,6 +33,10 @@ export const Navigation = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const navItems = [
     { id: "hero", label: "Inicio" },
     { id: "about", label: "Nosotros" },
@@ -53,8 +57,9 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Company Name */}
-          <div 
-            className={`flex items-center space-x-3 transition-all duration-500 ${
+          <button
+            onClick={scrollToTop}
+            className={`flex items-center space-x-3 transition-all duration-500 hover:scale-105 ${
               showLogo 
                 ? "opacity-100 transform translate-y-0" 
                 : "opacity-0 transform -translate-y-4 pointer-events-none"
@@ -68,7 +73,7 @@ export const Navigation = () => {
             <span className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
               SOIN D&L SAS
             </span>
-          </div>
+          </button>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-1">
@@ -101,7 +106,10 @@ export const Navigation = () => {
                 className="bg-black/95 backdrop-blur-sm border-l border-green-500/20 text-white w-80"
               >
                 <div className="flex flex-col space-y-4 mt-8">
-                  <div className="flex items-center space-x-3 mb-8">
+                  <button
+                    onClick={scrollToTop}
+                    className="flex items-center space-x-3 mb-8 hover:scale-105 transition-transform duration-200"
+                  >
                     <img 
                       src="/lovable-uploads/c251566e-1834-47c9-bf6f-646e7a6162c4.png" 
                       alt="SOIN D&L SAS Logo" 
@@ -110,7 +118,7 @@ export const Navigation = () => {
                     <span className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
                       SOIN D&L SAS
                     </span>
-                  </div>
+                  </button>
                   {navItems.map((item) => (
                     <SheetClose asChild key={item.id}>
                       <Button
