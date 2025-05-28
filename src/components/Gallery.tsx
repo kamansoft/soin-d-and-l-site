@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {
     Carousel,
@@ -14,19 +13,7 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import {Star} from "lucide-react";
-
-// Safely import gallery data with fallback
-let galleryData: Record<string, string[]> = {
-    "montaje-de-equipos": [],
-    "servicios-de-emergencia": []
-};
-
-try {
-    const { galleryData: importedGalleryData } = await import("@/data/gallery-data");
-    galleryData = importedGalleryData;
-} catch {
-    // Use fallback data if import fails
-}
+import { galleryData } from "@/data/gallery-data";
 
 export const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);

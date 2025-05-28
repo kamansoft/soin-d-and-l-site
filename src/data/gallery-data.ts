@@ -1,8 +1,63 @@
 
 // Auto-generated file - do not edit manually
 export const galleryData = {
-  "montaje-de-equipos": [],
-  "servicios-de-emergencia": []
+  "montaje-de-equipos": [
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0016.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0020.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0022.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0024.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0025.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0027.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0028.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0032.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0047.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250302-WA0058.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250316-WA0055.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250316-WA0056.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250316-WA0061.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250316-WA0067.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0108.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0109.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0110.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0153.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0156.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0157.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0158.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0163.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0170.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0172.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0178.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0181.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0198.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0199.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0203.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0204.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0234.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0235.jpg",
+    "/gallery-source/montaje-de-equipos/IMG-20250506-WA0236.jpg",
+    "/gallery-source/montaje-de-equipos/IMG20250514145341.jpg",
+    "/gallery-source/montaje-de-equipos/IMG20250515084803.jpg",
+    "/gallery-source/montaje-de-equipos/IMG20250521161526.jpg",
+    "/gallery-source/montaje-de-equipos/IMG20250521161734.jpg",
+    "/gallery-source/montaje-de-equipos/IMG20250521161929.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20241219_090935.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20241219_092036.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20241219_111203.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20241219_115330.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20250119_100848.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20250119_100849.jpg",
+    "/gallery-source/montaje-de-equipos/IMG_20250215_114250.jpg"
+  ],
+  "servicios-de-emergencia": [
+    "/gallery-source/servicios-de-emergencia/emergencia_1.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_2.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_3.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_4.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_5.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_6.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_7.jpg",
+    "/gallery-source/servicios-de-emergencia/emergencia_8.jpg"
+  ]
 };
 
 export type GalleryData = typeof galleryData;
