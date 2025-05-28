@@ -24,7 +24,7 @@ export const Gallery = () => {
             order: 1,
             title: "Montaje de Equipos",
             shortDescription: "Istalación de sistemas para la alimentación, ventilación, enfriamiento y pesaje en granja avicola.",
-            coverImage: "/lovable-uploads/montaje_2.jpg",
+            coverImage: "/montaje-de-equipos/IMG-20250316-WA0055.jpg",
             gallery: galleryData["montaje-de-equipos"]?.length > 0 ? galleryData["montaje-de-equipos"] : [
                 "/lovable-uploads/montaje_1.jpg",
                 "/lovable-uploads/montaje_2.jpg",
