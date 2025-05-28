@@ -17,20 +17,34 @@ export const Values = () => {
               VALORES
             </h3>
             <p className="text-lg text-gray-300 leading-relaxed mb-6 text-center">
-              Los valores que nos definen como organización y guían nuestro trabajo diario:
+             La manera de actuar que nos identifica, las creencias que guían nuestros
+comportamientos, un estilo de ser, de actuar y de trabajar para nuestros
+clientes.
             </p>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Disciplina
+                Proactividad.
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Puntualidad
+                Orientación al cliente
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Responsabilidad
+                Excelencia.
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Transparencia.
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Solidez
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Liquidez
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
@@ -38,15 +52,11 @@ export const Values = () => {
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Honestidad
+                Responsabilidad.
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Trabajo en equipo
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Calidad
+                Confidencialidad.
               </li>
             </ul>
           </div>
