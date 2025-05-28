@@ -18,13 +18,14 @@ export const Contact = () => {
           {[
             {
               icon: <Phone className="w-8 h-8 text-green-400" />,
-              title: "Teléfono",
-              info: "+57 XXX XXX XXXX"
+              title: "Teléfonos",
+              info: "+57 315 274 6269",
+              info2: "+57 315 868 5619"
             },
             {
               icon: <Mail className="w-8 h-8 text-green-400" />,
               title: "Email",
-              info: "info@soindlsas.com"
+              info: "soindl@hotmail.com"
             },
             {
               icon: <MapPin className="w-8 h-8 text-green-400" />,
@@ -39,19 +40,13 @@ export const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-green-400 mb-2">{contact.title}</h3>
                 <p className="text-gray-300">{contact.info}</p>
+                <p className="text-gray-300">{contact.info2}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-green-500 to-emerald-400 hover:from-green-600 hover:to-emerald-500 text-black font-semibold px-8 py-6 text-lg hover:scale-105 transition-all duration-300"
-          >
-            Solicitar Cotización
-          </Button>
-        </div>
+
 
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-green-500/20 text-center">

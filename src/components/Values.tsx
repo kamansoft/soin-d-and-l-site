@@ -16,8 +16,9 @@ export const Values = () => {
                             DE LA EMPRESA
                         </h3>
                         <p className="text-lg text-gray-300 leading-relaxed mb-6 text-center">
-                            La manera de actuar que nos identifica, las creencias que guían nuestros comportamientos, un
-                            estilo de ser, de actuar y de trabajar para nuestros clientes.
+                            La manera de actuar que nos identifica, las creencias que guían nuestros
+                            comportamientos, un estilo de ser, de actuar y de trabajar para nuestros
+                            clientes.
                         </p>
                         <ul className="space-y-3 text-gray-300">
                             <li className="flex items-center">
@@ -26,7 +27,7 @@ export const Values = () => {
                             </li>
                             <li className="flex items-center">
                                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                                Orientación al cliente.
+                                Orientación al cliente
                             </li>
                             <li className="flex items-center">
                                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
@@ -62,7 +63,7 @@ export const Values = () => {
                     {/* Professional Team */}
                     <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
                         <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-green-400">
-                            NUESTRO PERSONAL
+                            DE NUESTRO PERSONAL
                         </h3>
                         <p className="text-lg text-gray-300 leading-relaxed mb-6">
                             Contamos con un equipo profesional de técnicos y asesores altamente
