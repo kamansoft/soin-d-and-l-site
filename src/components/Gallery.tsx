@@ -13,33 +13,35 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import {Star} from "lucide-react";
+import { galleryData } from "@/data/gallery-data";
 
 export const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
 
     const featuredProjects = [
         {
-            id: 1,
+            id: "montaje-de-equipos",
+            order: 1,
             title: "Montaje de Equipos",
             shortDescription: "Istalación de sistemas para la alimentación, ventilación, enfriamiento y pesaje en granja avicola.",
             coverImage: "/lovable-uploads/montaje_2.jpg",
-            gallery: [
+            gallery: galleryData["montaje-de-equipos"]?.length > 0 ? galleryData["montaje-de-equipos"] : [
                 "/lovable-uploads/montaje_1.jpg",
                 "/lovable-uploads/montaje_2.jpg",
                 "/lovable-uploads/montaje_3.jpg",
                 "/lovable-uploads/montaje_4.jpg",
                 "/lovable-uploads/montaje_5.jpg",
                 "/lovable-uploads/montaje_6.jpg",
-
             ],
             fullDescription: "Ejecución de trabajos de instalación y montaje de sistemas integrales en granjas, incluyendo: comederos, bebederos, cuadros de agua, silos, sistemas de distribución de alimento, sistemas de enfriamiento tipo panel y fogger, sistemas de ventilación forzada y natural, así como sistemas de pesaje automatizados."
         },
         {
-            id: 2,
+            id: "servicios-de-emergencia",
+            order: 2,
             title: "Servicios de Emergencia",
             shortDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata.",
             coverImage: "/lovable-uploads/emergencia_4.jpg",
-            gallery: [
+            gallery: galleryData["servicios-de-emergencia"]?.length > 0 ? galleryData["servicios-de-emergencia"] : [
                 "/lovable-uploads/emergencia_1.jpg",
                 "/lovable-uploads/emergencia_2.jpg",
                 "/lovable-uploads/emergencia_3.jpg",
@@ -48,7 +50,6 @@ export const Gallery = () => {
                 "/lovable-uploads/emergencia_6.jpg",
                 "/lovable-uploads/emergencia_7.jpg",
                 "/lovable-uploads/emergencia_8.jpg",
-
             ],
             fullDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata."
         }
@@ -100,6 +101,9 @@ export const Gallery = () => {
         ));
     };
 
+    // Sort projects by order
+    const sortedProjects = featuredProjects.sort((a, b) => a.order - b.order);
+
     return (
         <section className="py-20 px-4 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900"></div>
@@ -116,7 +120,7 @@ export const Gallery = () => {
                         Proyectos y Servicios Realizados
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {featuredProjects.map((project) => (
+                        {sortedProjects.map((project) => (
                             <div
                                 key={project.id}
                                 className="group relative overflow-hidden rounded-2xl border border-green-500/20 hover:border-green-400/40 transition-all duration-300 cursor-pointer"
