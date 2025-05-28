@@ -43,7 +43,7 @@ export const Services = () => {
       title: "PRECOMISIONADO",
       excerpt: "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los sistemas...",
       items: [
-        "Ejecución de pruebas, chequeos y actividades antes de energizar y poner en funcionamiento los Sistema y Subsistemas, de acuerdo a lo descrito en los procedimientos"
+        "Ejecución de pruebas y verificaciones previas a la energización y puesta en marcha de sistemas y subsistemas, conforme a los procedimientos establecidos, garantizando el cumplimiento de los requerimientos técnicos especificados por cada disciplina."
       ]
     },
     {
@@ -51,12 +51,7 @@ export const Services = () => {
       title: "COMISIONADO",
       excerpt: "Verificamos cada elemento del sistema (eléctrico, tubería y equipo) que permitan acondicionar a las instalaciones...",
       items: [
-        "Verificamos cada elemento del sistema (eléctrico, tubería y equipo)",
-        "Permitir acondicionar a las instalaciones que integran los sistemas operativos",
-        "Iniciar el arranque o puesta en marcha y estabilización de las mismas en forma segura",
-        "Garantizar que los sistemas que conforman el proyecto, interactúen entre sí de acuerdo a los diseños",
-        "Cumplimiento de normas, requerimientos del cliente y recomendaciones de los fabricantes",
-        "Estar especialmente listos para iniciar las actividades de Puesta en Marcha de la Planta"
+        "Realizamos la verificación integral de cada componente del sistema —eléctrico, de tubería y equipos— con el objetivo de acondicionar las instalaciones que conforman los sistemas operativos, asegurando su preparación para el arranque, puesta en marcha y estabilización de manera segura y controlada. El propósito del comisionamiento es garantizar que todos los sistemas del proyecto interactúen correctamente entre sí, conforme a los diseños, normativas aplicables, requerimientos del cliente y recomendaciones de los fabricantes, dejándolos completamente habilitados para iniciar las actividades de puesta en marcha de la planta."
       ]
     },
     {
