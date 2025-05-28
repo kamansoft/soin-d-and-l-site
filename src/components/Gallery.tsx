@@ -1,3 +1,4 @@
+
 import {useState} from "react";
 import {
     Carousel,
@@ -13,7 +14,19 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import {Star} from "lucide-react";
-import { galleryData } from "@/data/gallery-data";
+
+// Safely import gallery data with fallback
+let galleryData: Record<string, string[]> = {
+    "montaje-de-equipos": [],
+    "servicios-de-emergencia": []
+};
+
+try {
+    const { galleryData: importedGalleryData } = await import("@/data/gallery-data");
+    galleryData = importedGalleryData;
+} catch {
+    // Use fallback data if import fails
+}
 
 export const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -25,7 +38,7 @@ export const Gallery = () => {
             title: "Montaje de Equipos",
             shortDescription: "Istalación de sistemas para la alimentación, ventilación, enfriamiento y pesaje en granja avicola.",
             coverImage: "/lovable-uploads/montaje_2.jpg",
-            gallery: galleryData["montaje-de-equipos"] || [
+            gallery: galleryData["montaje-de-equipos"]?.length > 0 ? galleryData["montaje-de-equipos"] : [
                 "/lovable-uploads/montaje_1.jpg",
                 "/lovable-uploads/montaje_2.jpg",
                 "/lovable-uploads/montaje_3.jpg",
@@ -41,7 +54,7 @@ export const Gallery = () => {
             title: "Servicios de Emergencia",
             shortDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata.",
             coverImage: "/lovable-uploads/emergencia_4.jpg",
-            gallery: galleryData["servicios-de-emergencia"] || [
+            gallery: galleryData["servicios-de-emergencia"]?.length > 0 ? galleryData["servicios-de-emergencia"] : [
                 "/lovable-uploads/emergencia_1.jpg",
                 "/lovable-uploads/emergencia_2.jpg",
                 "/lovable-uploads/emergencia_3.jpg",
