@@ -1,4 +1,3 @@
-
 // Auto-generated file - do not edit manually
 export const galleryData = {
   "montaje-de-equipos": [
