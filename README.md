@@ -1,3 +1,4 @@
+
 # Welcome to your Lovable project
 
 ## Project info
@@ -60,9 +61,79 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## How to deploy to GitHub Pages
 
-Simply open [Lovable](https://lovable.dev/projects/ad3b5c61-8963-4ca3-b37e-f64ca17e21ed) and click on Share -> Publish.
+This project is configured for deployment to GitHub Pages using two methods:
+
+### Method 1: Automatic Deployment (Recommended)
+
+The project includes a GitHub Actions workflow that automatically deploys your app to GitHub Pages whenever you push changes to the main branch.
+
+**Setup Steps:**
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Click on "Settings" tab
+   - Scroll down to "Pages" in the left sidebar
+   - Under "Source", select "Deploy from a branch"
+   - Choose "gh-pages" branch and "/ (root)" folder
+   - Click "Save"
+
+2. **Update the base path:**
+   - Open `vite.config.ts`
+   - Replace `'your-repo-name'` with your actual repository name
+   - For example, if your repo is `https://github.com/username/my-awesome-app`, change it to `'/my-awesome-app/'`
+
+3. **Push changes to main branch:**
+   - The GitHub Actions workflow will automatically trigger
+   - Your site will be available at `https://yourusername.github.io/your-repo-name/`
+
+**How it works:**
+- The workflow runs on every push to the main branch
+- It installs dependencies, builds the project, and deploys to the `gh-pages` branch
+- GitHub Pages serves the content from the `gh-pages` branch
+
+### Method 2: Manual Deployment
+
+You can also deploy manually using the included deployment script.
+
+**Setup Steps:**
+
+1. **Update the base path** (same as Method 1, step 2)
+
+2. **Make the deploy script executable:**
+   ```sh
+   chmod +x deploy.sh
+   ```
+
+3. **Update the deploy script:**
+   - Open `deploy.sh`
+   - Uncomment and modify one of the git push commands at the bottom:
+     - For `username.github.io` repository: uncomment and update the first git push command
+     - For project repository: uncomment and update the second git push command
+   
+   Example for a project repository:
+   ```sh
+   git push -f git@github.com:yourusername/your-repo-name.git main:gh-pages
+   ```
+
+4. **Run the deployment:**
+   ```sh
+   ./deploy.sh
+   ```
+
+### Important Notes:
+
+- **Repository name:** Make sure to update `'your-repo-name'` in `vite.config.ts` with your actual repository name
+- **GitHub Pages settings:** Ensure GitHub Pages is configured to deploy from the `gh-pages` branch
+- **Custom domain:** If using a custom domain, uncomment and update the CNAME line in `deploy.sh`
+- **First deployment:** The first deployment might take a few minutes to become available
+
+### Troubleshooting:
+
+- If the site shows a blank page, check that the base path in `vite.config.ts` matches your repository name
+- If images or assets don't load, ensure all asset paths are relative (they should be by default with Vite)
+- Check the "Actions" tab in your GitHub repository to see the deployment status and any errors
 
 ## Can I connect a custom domain to my Lovable project?
 
