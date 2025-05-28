@@ -56,7 +56,7 @@ export const Hero = () => {
         </p>
 
         <p className="text-base md:text-lg lg:text-xl text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-300">
-          Empresa joven conformada por personal calificado, especializada en servicios  eléctricao y mecánicao para la industria en general, con experiencia en sectores como el agropecuario, manufactura, y otros entornos productivos.
+          Empresa joven conformada por personal calificado, especializada en servicios  eléctrico y mecánico para la industria en general, con experiencia en sectores como el agropecuario, manufactura, y otros entornos productivos.
         </p>
 
         <Button 
