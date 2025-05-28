@@ -19,7 +19,8 @@ export const Gallery = () => {
 
     const featuredProjects = [
         {
-            id: 1,
+            id: "montaje-de-equipos",
+            order: 1,
             title: "Montaje de Equipos",
             shortDescription: "Istalación de sistemas para la alimentación, ventilación, enfriamiento y pesaje en granja avicola.",
             coverImage: "/lovable-uploads/montaje_2.jpg",
@@ -35,7 +36,8 @@ export const Gallery = () => {
             fullDescription: "Ejecución de trabajos de instalación y montaje de sistemas integrales en granjas, incluyendo: comederos, bebederos, cuadros de agua, silos, sistemas de distribución de alimento, sistemas de enfriamiento tipo panel y fogger, sistemas de ventilación forzada y natural, así como sistemas de pesaje automatizados."
         },
         {
-            id: 2,
+            id: "servicios-de-emergencia",
+            order: 2,
             title: "Servicios de Emergencia",
             shortDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata.",
             coverImage: "/lovable-uploads/emergencia_4.jpg",
@@ -100,6 +102,9 @@ export const Gallery = () => {
         ));
     };
 
+    // Sort projects by order
+    const sortedProjects = featuredProjects.sort((a, b) => a.order - b.order);
+
     return (
         <section className="py-20 px-4 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900"></div>
@@ -116,7 +121,7 @@ export const Gallery = () => {
                         Proyectos y Servicios Realizados
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {featuredProjects.map((project) => (
+                        {sortedProjects.map((project) => (
                             <div
                                 key={project.id}
                                 className="group relative overflow-hidden rounded-2xl border border-green-500/20 hover:border-green-400/40 transition-all duration-300 cursor-pointer"
