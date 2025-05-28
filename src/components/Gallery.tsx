@@ -13,6 +13,7 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import {Star} from "lucide-react";
+import { galleryData } from "@/data/gallery-data";
 
 export const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -24,14 +25,13 @@ export const Gallery = () => {
             title: "Montaje de Equipos",
             shortDescription: "Istalación de sistemas para la alimentación, ventilación, enfriamiento y pesaje en granja avicola.",
             coverImage: "/lovable-uploads/montaje_2.jpg",
-            gallery: [
+            gallery: galleryData["montaje-de-equipos"] || [
                 "/lovable-uploads/montaje_1.jpg",
                 "/lovable-uploads/montaje_2.jpg",
                 "/lovable-uploads/montaje_3.jpg",
                 "/lovable-uploads/montaje_4.jpg",
                 "/lovable-uploads/montaje_5.jpg",
                 "/lovable-uploads/montaje_6.jpg",
-
             ],
             fullDescription: "Ejecución de trabajos de instalación y montaje de sistemas integrales en granjas, incluyendo: comederos, bebederos, cuadros de agua, silos, sistemas de distribución de alimento, sistemas de enfriamiento tipo panel y fogger, sistemas de ventilación forzada y natural, así como sistemas de pesaje automatizados."
         },
@@ -41,7 +41,7 @@ export const Gallery = () => {
             title: "Servicios de Emergencia",
             shortDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata.",
             coverImage: "/lovable-uploads/emergencia_4.jpg",
-            gallery: [
+            gallery: galleryData["servicios-de-emergencia"] || [
                 "/lovable-uploads/emergencia_1.jpg",
                 "/lovable-uploads/emergencia_2.jpg",
                 "/lovable-uploads/emergencia_3.jpg",
@@ -50,7 +50,6 @@ export const Gallery = () => {
                 "/lovable-uploads/emergencia_6.jpg",
                 "/lovable-uploads/emergencia_7.jpg",
                 "/lovable-uploads/emergencia_8.jpg",
-
             ],
             fullDescription: "Servicios de atencion que por su gravedad requieren intervención inmediata."
         }
